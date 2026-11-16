@@ -12,7 +12,7 @@ export function Hero() {
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('andrews.cs16@gmail.com');
+      await navigator.clipboard.writeText('andersonjose.pbs@gmail.com');
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
@@ -92,7 +92,7 @@ export function Hero() {
                 ? 'border-emerald-500/50 bg-emerald-950/30 text-emerald-300'
                 : 'border-[#27272A] bg-[#111113] hover:border-[#3F3F46] text-[#A1A1AA] hover:text-[#FAFAFA]'
             }`}
-            title="andrews.cs16@gmail.com"
+            title="andersonjose.pbs@gmail.com"
           >
             {copied ? (
               <>

@@ -84,7 +84,7 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Mail className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>andrews.cs16@gmail.com</span>
+                  <span>andersonjose.pbs@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-[#A1A1AA]" />

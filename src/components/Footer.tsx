@@ -11,7 +11,7 @@ export function Footer() {
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('andrews.cs16@gmail.com');
+      await navigator.clipboard.writeText('andersonjose.pbs@gmail.com');
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
@@ -43,11 +43,11 @@ export function Footer() {
             <div className="flex flex-wrap items-center gap-3">
               {/* Primary Direct Email Button */}
               <a
-                href="mailto:andrews.cs16@gmail.com"
+                href="mailto:andersonjose.pbs@gmail.com"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-xs sm:text-sm transition-all cursor-pointer shadow-sm"
               >
                 <Mail className="w-4 h-4" />
-                <span>andrews.cs16@gmail.com</span>
+                <span>andersonjose.pbs@gmail.com</span>
               </a>
 
               {/* Copy Email Button */}

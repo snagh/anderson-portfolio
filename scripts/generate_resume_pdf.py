@@ -62,7 +62,7 @@ html_content = """<!DOCTYPE html>
   <div class="contacts">
     <span>Palmas, TO, Brazil (UTC-3 • Full US/EU Overlap)</span>
     <span>•</span>
-    <span><a href="mailto:andrews.cs16@gmail.com">andrews.cs16@gmail.com</a></span>
+    <span><a href="mailto:andersonjose.pbs@gmail.com">andersonjose.pbs@gmail.com</a></span>
     <span>•</span>
     <span>+55 (63) 98130-1098</span>
     <span>•</span>
