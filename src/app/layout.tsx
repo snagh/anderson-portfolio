@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -14,6 +14,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#09090B',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://andersonjose.dev.br'),
