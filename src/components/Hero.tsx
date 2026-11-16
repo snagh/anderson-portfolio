@@ -21,7 +21,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-16 sm:pt-24 pb-16 sm:pb-24 border-b border-[#27272A]/70 overflow-hidden bg-tech-grid">
+    <section className="relative pt-12 sm:pt-20 md:pt-24 pb-14 sm:pb-20 md:pb-24 border-b border-[#27272A]/70 overflow-hidden bg-tech-grid">
       {/* Subtle radial ambient glow */}
       <div
         className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-500/5 blur-[120px] rounded-full"
@@ -30,8 +30,8 @@ export function Hero() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/25 bg-emerald-950/20 text-[11px] sm:text-xs font-mono text-emerald-400 mb-6">
-          <span className="relative flex h-2 w-2">
+        <div className="inline-flex items-start sm:items-center gap-2 p-2 sm:px-3 sm:py-1.5 rounded-xl sm:rounded-full border border-emerald-500/25 bg-emerald-950/20 text-[11px] sm:text-xs font-mono text-emerald-400 mb-6 max-w-full leading-snug">
+          <span className="relative flex h-2 w-2 shrink-0 mt-1 sm:mt-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
           </span>
@@ -39,58 +39,61 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#FAFAFA] max-w-4xl leading-[1.1] mb-6">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAFAFA] max-w-4xl leading-[1.15] mb-4 sm:mb-6">
           {t.hero.headline}
         </h1>
 
         {/* Subheadline */}
-        <p className="text-base sm:text-lg md:text-xl text-[#A1A1AA] max-w-3xl leading-relaxed mb-8 sm:mb-10 font-normal">
+        <p className="text-sm sm:text-base md:text-lg text-[#A1A1AA] max-w-3xl leading-relaxed mb-8 sm:mb-10 font-normal">
           {t.hero.subheadline}
         </p>
 
-        {/* CTAs and Links */}
-        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+        {/* CTAs and Links (Mobile Optimized: full-width on xs, clean layout) */}
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3.5">
           {/* Primary CTA */}
           <Link
             href="#architecture"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#FAFAFA] hover:bg-[#E4E4E7] text-[#09090B] font-semibold text-xs sm:text-sm transition-all shadow-sm hover:shadow-cyan-500/10 cursor-pointer"
+            className="flex items-center justify-center gap-2 px-5 py-3 sm:py-2.5 rounded-lg bg-[#FAFAFA] hover:bg-[#E4E4E7] active:bg-[#D4D4D8] text-[#09090B] font-semibold text-xs sm:text-sm transition-all shadow-sm cursor-pointer min-h-[44px]"
           >
             <span>{t.hero.exploreCta}</span>
             <ArrowDown className="w-4 h-4" />
           </Link>
 
-          {/* GitHub Link */}
-          <a
-            href="https://github.com/snagh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#27272A] bg-[#111113] hover:border-[#3F3F46] hover:bg-[#18181B] text-xs sm:text-sm font-medium text-[#FAFAFA] transition-all cursor-pointer"
-          >
-            <GithubIcon className="w-4 h-4 text-[#A1A1AA]" />
-            <span>{t.hero.githubLabel}</span>
-            <ExternalLink className="w-3 h-3 text-[#71717A]" />
-          </a>
+          {/* Secondary Actions Row for Mobile */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-3">
+            {/* GitHub Link */}
+            <a
+              href="https://github.com/snagh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-lg border border-[#27272A] bg-[#111113] hover:border-[#3F3F46] hover:bg-[#18181B] active:bg-[#1F1F23] text-xs sm:text-sm font-medium text-[#FAFAFA] transition-all cursor-pointer min-h-[44px]"
+            >
+              <GithubIcon className="w-4 h-4 text-[#A1A1AA]" />
+              <span>{t.hero.githubLabel}</span>
+              <ExternalLink className="w-3 h-3 text-[#71717A]" />
+            </a>
 
-          {/* Behance Link */}
-          <a
-            href="https://www.behance.net/andersonmartins7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-[#27272A] bg-[#111113] hover:border-[#3F3F46] hover:bg-[#18181B] text-xs sm:text-sm font-medium text-[#FAFAFA] transition-all cursor-pointer"
-          >
-            <BehanceIcon className="w-4 h-4 text-cyan-400" />
-            <span>{t.hero.behanceLabel}</span>
-            <ExternalLink className="w-3 h-3 text-[#71717A]" />
-          </a>
+            {/* Behance Link */}
+            <a
+              href="https://www.behance.net/andersonmartins7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-lg border border-[#27272A] bg-[#111113] hover:border-[#3F3F46] hover:bg-[#18181B] active:bg-[#1F1F23] text-xs sm:text-sm font-medium text-[#FAFAFA] transition-all cursor-pointer min-h-[44px]"
+            >
+              <BehanceIcon className="w-4 h-4 text-cyan-400" />
+              <span>{t.hero.behanceLabel}</span>
+              <ExternalLink className="w-3 h-3 text-[#71717A]" />
+            </a>
+          </div>
 
           {/* Copy Email Button */}
           <button
             type="button"
             onClick={handleCopyEmail}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border transition-all text-xs sm:text-sm font-mono cursor-pointer ${
+            className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border transition-all text-xs sm:text-sm font-mono cursor-pointer min-h-[44px] ${
               copied
                 ? 'border-emerald-500/50 bg-emerald-950/30 text-emerald-300'
-                : 'border-[#27272A] bg-[#111113] hover:border-[#3F3F46] text-[#A1A1AA] hover:text-[#FAFAFA]'
+                : 'border-[#27272A] bg-[#111113] hover:border-[#3F3F46] active:bg-[#18181B] text-[#A1A1AA] hover:text-[#FAFAFA]'
             }`}
             title="andersonjose.pbs@gmail.com"
           >
@@ -109,18 +112,17 @@ export function Hero() {
         </div>
 
         {/* Technical Domain Badges */}
-        <div className="mt-12 pt-6 border-t border-[#27272A]/50 flex flex-wrap items-center gap-y-2 gap-x-6 text-[11px] font-mono text-[#71717A]">
-          <span className="text-[#A1A1AA] flex items-center gap-1.5">
-            <Terminal className="w-3.5 h-3.5 text-cyan-400" />
-            Core Focus:
-          </span>
-          <span>Distributed B2B SaaS</span>
-          <span>•</span>
-          <span>Applied Multimodal AI</span>
-          <span>•</span>
-          <span>Zero-Trust Infrastructure</span>
-          <span>•</span>
-          <span>Healthcare Logistics</span>
+        <div className="mt-10 sm:mt-12 pt-6 border-t border-[#27272A]/50">
+          <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#A1A1AA] mb-2.5">
+            <Terminal className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+            <span className="font-semibold">Core Focus:</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono text-[#71717A]">
+            <span className="px-2 py-0.5 rounded bg-[#111113] border border-[#27272A] text-[#D4D4D8]">Distributed B2B SaaS</span>
+            <span className="px-2 py-0.5 rounded bg-[#111113] border border-[#27272A] text-[#D4D4D8]">Applied Multimodal AI</span>
+            <span className="px-2 py-0.5 rounded bg-[#111113] border border-[#27272A] text-[#D4D4D8]">Zero-Trust Infrastructure</span>
+            <span className="px-2 py-0.5 rounded bg-[#111113] border border-[#27272A] text-[#D4D4D8]">Healthcare Logistics</span>
+          </div>
         </div>
       </div>
     </section>
