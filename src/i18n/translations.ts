@@ -818,10 +818,10 @@ export const translations: Record<Language, Translations> = {
       downloadNotice: 'Use Ctrl+P ou o botão acima para salvar ou imprimir este currículo em PDF limpo e formatado.',
     },
     footer: {
-      readyToTalk: 'Disponível para Posições Senior & Architect Globais',
-      ctaHeadline: 'Vamos construir software de missão crítica que escala com solidez.',
+      readyToTalk: 'Disponível para Oportunidades Sênior & Arquitetura',
+      ctaHeadline: 'Vamos construir sistemas robustos e produtos preparados para alta escala.',
       ctaSubheadline:
-        'Aberto para posições remotas (EUA/Europa/Brasil), cargos de liderança técnica e consultoria de arquitetura.',
+        'Aberto a oportunidades remotas globais (EUA, Europa e Brasil), liderança técnica e consultoria de arquitetura de software.',
       copyEmail: 'Copiar E-mail',
       copied: 'E-mail copiado!',
       techNote: 'Desenvolvido com Next.js 16 (App Router), TypeScript (Strict) e Tailwind CSS. Hospedado com zero overhead de runtime.',
